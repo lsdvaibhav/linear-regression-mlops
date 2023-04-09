@@ -24,11 +24,14 @@ class DataTransformation:
 
     def get_data_transformer_object(self):
         '''
-        This function si responsible for data trnasformation
+        This function is responsible for data trnasformation
         
         '''
         try:
+            # Make columns more dynamic from your analysis of Data by EDA
+            # Get Data from EDA Numrical columns
             numerical_columns = ["writing_score", "reading_score"]
+            # Get Data from EDA categorical columns
             categorical_columns = [
                 "gender",
                 "race_ethnicity",

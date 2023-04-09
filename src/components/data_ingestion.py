@@ -25,6 +25,7 @@ class DataIngestion:
     def initiate_data_ingestion(self):
         logging.info("Entered the data ingestion method or component")
         try:
+            # Process the EDA Final data Set for training and test
             df=pd.read_csv('notebook\data\stud.csv')
             logging.info('Read the dataset as dataframe')
 
@@ -39,7 +40,7 @@ class DataIngestion:
 
             test_set.to_csv(self.ingestion_config.test_data_path,index=False,header=True)
 
-            logging.info("Inmgestion of the data iss completed")
+            logging.info("Ingestion of the data is completed")
 
             return(
                 self.ingestion_config.train_data_path,
